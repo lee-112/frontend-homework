@@ -150,6 +150,3 @@ $ git push <remote> <branchname>
 - Examples of pull requests:
   - [Pull request in Fastify.js](https://github.com/fastify/fastify/pull/4264)
   - [Pull request in GitHub Primer](https://github.com/primer/react/pull/2337)
-
-## Test Setup
-Submitting a Pull Request (PR).
