@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (Number.isSafeInteger(numberInt) && numberInt >= 0) {
         const isNumberPalindrome = isPalindrome(numberInt);
         outputElement.innerHTML = isNumberPalindrome
-          ? '<p class="m-0" style="color: Green;">Yes, This is a Palindrome!</p>'
-          : '<p class="m-0" style="color: FireBrick;">No, Try again.</p>';
+          ? '<p class="m-0 text-green">Yes, This is a Palindrome!</p>'
+          : '<p class="m-0 text-red">No, Try again.</p>';
       } else {
         outputElement.innerHTML = numberInt < 0
           ? '<p class="alert alert-warning m-0">Error! Only Positive Numbers Allowed.</p>'
