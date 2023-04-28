@@ -1,4 +1,3 @@
-document.querySelector('form').style.width = '500px';
 const form = document.getElementById('formID');
 // eslint-disable-next-line no-console
 const Console = console;

@@ -1,6 +1,3 @@
-document.body.style.backgroundColor = '#00435f';
-document.querySelector('main').style.maxWidth = '500px';
-
 const word = document.getElementById('wordID');
 const text = document.getElementById('textID');
 const innerText = text.innerHTML;
@@ -19,13 +16,9 @@ function escapeRegExp(string) {
  * When triggered, highlights all word occurrences in the text.
  */
 word.addEventListener('input', () => {
-  const markWord = word.value;
   text.innerHTML = innerText;
-
-  if (markWord.trim() !== '') {
-    const matching = RegExp(`\\b${escapeRegExp(markWord)}\\b`, 'gi');
-    text.innerHTML = text.innerHTML.replace(matching, `
-      <mark class="bg-warning d-inline p-0 m-0">${markWord}</mark>
-    `);
-  }
+  const markWord = word.value;
+  const matching = RegExp(`\\b${escapeRegExp(markWord)}\\b`, 'g');
+  const replaced = `<mark class="p-0 m-0">${markWord}</mark>`;
+  text.innerHTML = text.innerHTML.replace(matching, replaced);
 });
