@@ -1,4 +1,3 @@
-// document.querySelector('main').style.maxWidth = '512px';
 const inputBtn = document.getElementById('buttonID');
 const inputStr = document.getElementById('numberID');
 let interval;
