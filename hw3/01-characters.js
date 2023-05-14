@@ -3,10 +3,10 @@ async function displayCharacterCards(data) {
   data.forEach((character) => {
     const characterCards = `
       <div class="card">
-        <img src="${character.imageUrl}">
+        <img alt="${character.id}" src="${character.imageUrl}">
         <div class="card-body">
-          <h5 class="fw-bolder">${character.fullName}</h5>
-          <h6 class="fw-bold">${character.title}</h6>
+          <h2 class="fs-5 fw-bolder">${character.fullName}</h2>
+          <h3 class="fs-6 fw-bolder my-3">${character.title}</h3>
         </div>
       </div>`;
     sectionTagHTML.innerHTML += characterCards;
