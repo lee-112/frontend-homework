@@ -70,19 +70,3 @@ function Search() {
 }
 
 export default Search;
-
-/**
- * 
- * <div className="container rounder text-center p-2">
-            <img
-              alt={character.fullName}
-              src={character.imageUrl}
-              height="200px"
-              width="200px"
-            />
-            <div className="fw-bold">
-              <p className="fw-bolder">{character.fullName}</p>
-              <p>{character.title}</p>
-            </div>
-          </div>
- */
