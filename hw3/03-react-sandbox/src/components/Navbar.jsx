@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid text-light">
-        <Link className="navbar-brand" to="/home">
+        <Link className="navbar-brand" to="/">
           Thrones API
         </Link>
         <button

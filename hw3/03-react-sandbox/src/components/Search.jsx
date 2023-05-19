@@ -34,17 +34,25 @@ function Search() {
         className="container justify-content-center"
         style={{ maxWidth: "768px" }}
       >
-        <div className="d-flex flex-column align-items-center">
+        <div className="input-group d-flex justify-content-center">
           <input
-            className="my-2"
-            type="text"
+            className="form-control"
+            id="search-api"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            style={{ maxWidth: "320px" }}
           />
-          <button className="mb-4" onClick={searchCharacter}>
-            Search
+          <button
+            className="btn bg-dark text-light"
+            aria-label="search"
+            onClick={searchCharacter}
+          >
+            <label htmlFor="search-api" className="form-label m-0">
+              Search
+            </label>
           </button>
         </div>
+
         {character && (
           <div
             className="card text-center my-4 m-auto justify-content-center"
@@ -52,14 +60,14 @@ function Search() {
           >
             <img
               className="p-2"
-              alt={character.fullName}
+              alt={character.id}
               src={character.imageUrl}
               height="220px"
               width="197px"
             />
             <div className="card-body">
-              <h5 className="fw-bolder">{character.fullName}</h5>
-              <h6 className="fw-bold">{character.title}</h6>
+              <h2 className="fs-5 fw-bolder">{character.fullName}</h2>
+              <h3 className="fs-6 fw-bolder">{character.title}</h3>
             </div>
           </div>
         )}

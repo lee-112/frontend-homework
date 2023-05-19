@@ -36,6 +36,7 @@ const parseChartData = (data) => {
 
   data.forEach((character) => {
     let houseFound = false;
+
     for (const [key, value] of Object.entries(familyMap)) {
       if (character.family.includes(key)) {
         houseData[value] += 1;
@@ -56,7 +57,7 @@ const parseChartData = (data) => {
     labels: chartLegend,
     datasets: [
       {
-        label: "House Thrones",
+        label: "Thrones Houses",
         data: chartValues,
         backgroundColor: backgroundColors,
         borderColor: borderColors,
@@ -97,7 +98,7 @@ const Houses = () => {
       },
       title: {
         display: true,
-        text: "Doughnut Chart",
+        text: "Thrones Houses",
         color: "black"
       }
     },
@@ -106,19 +107,24 @@ const Houses = () => {
     backgroundColor: "white"
   };
 
-  return chartData ? (
-    <div
-      className="vh-auto m-auto mt-4 bg-white rounded"
-      style={{ width: "80vw", height: "fit-content" }}
-    >
-      <Doughnut
-        className="d-flex m-auto p-2 w-75 h-auto"
-        data={chartData}
-        options={options}
-      />
-    </div>
-  ) : (
-    <div>Error...</div>
+  return (
+    <>
+      <h1 className="text-center my-4">Doughnut Chart</h1>
+      {chartData ? (
+        <div
+          className="vh-auto m-auto bg-white rounded"
+          style={{ width: "80vw", height: "fit-content" }}
+        >
+          <Doughnut
+            className="d-flex m-auto p-2 w-50 h-auto"
+            data={chartData}
+            options={options}
+          />
+        </div>
+      ) : (
+        <div>Error...</div>
+      )}
+    </>
   );
 };
 
